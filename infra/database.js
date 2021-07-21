@@ -6,9 +6,9 @@ const sequelize = new Sequelize({
 })
 try {
     sequelize.authenticate();
-    console.log('Connection has been established successfully.');
+    console.log('Conexão foi estabelecida com sucesso.');
 } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('Não foi possível se conectar ao bando de dados:', error);
 }
 
 module.exports = sequelize;

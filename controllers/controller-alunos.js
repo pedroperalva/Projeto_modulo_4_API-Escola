@@ -5,8 +5,8 @@ module.exports = (app)=>{
     const novoAluno = new Aluno()
 
     app.post('/alunos', async (req, res)=>{
-        const {nome, mae, pai, anoescolar, endereco, telefone, emailresp} = req.body;
-        await novoAluno.criarAluno(nome, mae, pai, anoescolar, endereco, telefone, emailresp)
+        const {nome, mae, pai, endereco, telefone, emailresp} = req.body;
+        await novoAluno.criarAluno(nome, mae, pai, endereco, telefone, emailresp)
         .then((result)=>{
             res.status(201).json({result, mensagem: "Aluno criado com sucesso"})
         })
@@ -40,7 +40,7 @@ module.exports = (app)=>{
     app.put('/alunos/:matricula', async (req, res)=>{
         const matricula = req.params.matricula
         const body = req.body
-        await novoAluno.updateAluno(matricula, body)
+        await novoAluno.updateAlunoMatricula(matricula, body)
         .then((result)=>{
             res.status(200).json({result, mensagem: "Aluno modificado com sucesso"})
         })
@@ -51,12 +51,12 @@ module.exports = (app)=>{
 
     app.delete('/alunos/:matricula', async (req, res)=>{
         const matricula = req.params.matricula
-        await novoAluno.deleteAluno(matricula)
+        await novoAluno.deleteAlunoMatricula(matricula)
         .then((result)=>{
-            res.status(200).json({result, mensagem: "Aluno modificado com sucesso"})
+            res.status(200).json({result, mensagem: "Aluno deletado com sucesso"})
         })
         .catch((err)=>{
-            res.status(400).json({err, mensagem: "Erro ao modificar Aluno"})
+            res.status(400).json({err, mensagem: "Erro ao deletar Aluno"})
         })
     })
 }
