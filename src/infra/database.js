@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize({
     dialect:'sqlite',
-    storage:'../projeto_modulo4/infra/database.sqlite'
+    storage:'../projeto_modulo4/src/infra/database.sqlite'
 })
 try {
     sequelize.authenticate();

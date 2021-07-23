@@ -20,20 +20,20 @@ class Aluno {
 
         return AlunoData.findAll()
     }
-//método de buscar o aluno pela matrícula
-    getAlunoMatricula(matricula){
+//método de buscar o aluno pelo email
+    getAlunoEmail(emailresp){
 
-        return AlunoData.findByPk(matricula)
+        return AlunoData.findAll({where: {emailresp:emailresp}})
     }
-//método de alterar o aluno pela matrícula passando o que vai ser alterado pelo body
-    updateAlunoMatricula(matricula, body){
+//método de alterar o aluno pelo email passando o que vai ser alterado pelo body
+    updateAlunoEmail(emailresp, body){
 
-        return AlunoData.update(body, {where: {matricula:matricula}})
+        return AlunoData.update(body, {where: {emailresp:emailresp}})
     }
-//método de deletar alunos pela matrícula
-    deleteAlunoMatricula(matricula){
+//método de deletar alunos pelo email
+    deleteAlunoEmail(emailresp){
 
-        return AlunoData.destroy({where: {matricula:matricula}})
+        return AlunoData.destroy({where: {emailresp:emailresp}})
     }
 }
 

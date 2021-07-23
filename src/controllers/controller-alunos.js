@@ -26,9 +26,9 @@ module.exports = (app)=>{
         })
     })
 
-    app.get('/alunos/:matricula', async (req, res)=>{
-        const matricula = req.params.matricula
-        await novoAluno.getAlunoMatricula(matricula)
+    app.get('/alunos/:emailresp', async (req, res)=>{
+        const emailresp = req.params.emailresp
+        await novoAluno.getAlunoEmail(emailresp)
         .then((result)=>{
             res.status(200).json({result, mensagem: "Aluno encontrado com sucesso"})
         })
@@ -37,10 +37,10 @@ module.exports = (app)=>{
         })
     })
 
-    app.put('/alunos/:matricula', async (req, res)=>{
-        const matricula = req.params.matricula
+    app.put('/alunos/:emailresp', async (req, res)=>{
+        const emailresp = req.params.emailresp
         const body = req.body
-        await novoAluno.updateAlunoMatricula(matricula, body)
+        await novoAluno.updateAlunoEmail(emailresp, body)
         .then((result)=>{
             res.status(200).json({result, mensagem: "Aluno modificado com sucesso"})
         })
@@ -49,9 +49,9 @@ module.exports = (app)=>{
         })
     })
 
-    app.delete('/alunos/:matricula', async (req, res)=>{
-        const matricula = req.params.matricula
-        await novoAluno.deleteAlunoMatricula(matricula)
+    app.delete('/alunos/:emailresp', async (req, res)=>{
+        const emailresp = req.params.emailresp
+        await novoAluno.deleteAlunoEmail(emailresp)
         .then((result)=>{
             res.status(200).json({result, mensagem: "Aluno deletado com sucesso"})
         })
