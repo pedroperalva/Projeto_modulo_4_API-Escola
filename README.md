@@ -24,7 +24,7 @@ O projeto é uma API feita utilizando JavaScript, Node.JS, Express e SQLite como
 ### 2- Você deverá ter na sua máquina um programa para fazer as requisições, como Insomnia ou Postman, por exemplo, e utilizar as seguintes rotas:
 ```bash
   GET: "http://localhost:3032/alunos"
-  //Buscar todos os alunos no bd
+  // Buscar todos os alunos no bd
   GET: "http://localhost:3032/alunos/:email" 
   // Buscar alunos específicos por email como parâmetro
   POST: "http://localhost:3032/alunos" 
