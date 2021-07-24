@@ -24,10 +24,15 @@ O projeto é uma API feita utilizando JavaScript, Node.JS, Express e SQLite como
 ### 2- Você deverá ter na sua máquina um programa para fazer as requisições, como Insomnia ou Postman, por exemplo, e utilizar as seguintes rotas:
 ```bash
   GET: "http://localhost:3032/alunos"
-  GET: "http://localhost:3032/alunos/:email"
-  POST: "http://localhost:3032/alunos"
-  PUT: "http://localhost:3032/alunos/:email"
-  DELETE: "http://localhost:3032/alunos/:email"
+  //Buscar todos os alunos no bd
+  GET: "http://localhost:3032/alunos/:email" 
+  // Buscar alunos específicos por email como parâmetro
+  POST: "http://localhost:3032/alunos" 
+  // Inserir alunos no banco de dados através do body com JSON
+  PUT: "http://localhost:3032/alunos/:email" 
+  // Modificar alunos específicos por email como parâmetro (é necessário inserir todos os dados no body como JSON)
+  DELETE: "http://localhost:3032/alunos/:email" 
+  // Deletar alunos específicos por email como parâmetro
 ```
 ## 📘Realizando os testes:
 
