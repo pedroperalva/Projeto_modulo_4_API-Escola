@@ -28,9 +28,9 @@ O projeto é uma API feita utilizando JavaScript, Node.JS, Express e SQLite como
   GET: "http://localhost:3032/alunos/:email" 
   // Buscar alunos específicos por email como parâmetro
   POST: "http://localhost:3032/alunos" 
-  // Inserir alunos no banco de dados através do body com JSON
+  // Inserir alunos no banco de dados passando um JSON pelo body
   PUT: "http://localhost:3032/alunos/:email" 
-  // Modificar alunos específicos por email como parâmetro (é necessário inserir todos os dados no body como JSON)
+  // Modificar alunos específicos por email como parâmetro (é necessário inserir todos os dados passando um JSON pelo body)
   DELETE: "http://localhost:3032/alunos/:email" 
   // Deletar alunos específicos por email como parâmetro
 ```
