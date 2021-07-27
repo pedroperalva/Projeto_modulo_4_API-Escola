@@ -6,7 +6,7 @@ describe('Teste das rotas', ()=>{
         const res = await request(app).get('/alunos')
         expect(res.statusCode).toEqual(200)
         expect(res.error).toBe(false)
-        expect(res.body).toHaveProperty('result')
+        expect(res.body).toHaveProperty('resultado')
     })
 
     it('should post on my route alunos', async ()=>{
@@ -20,14 +20,14 @@ describe('Teste das rotas', ()=>{
         })
         expect(res.statusCode).toEqual(201)
         expect(res.error).toBe(false)
-        expect(res.body).toHaveProperty('result')     
+        expect(res.body).toHaveProperty('resultado')     
     })
 
     it('should get my route alunos with email param', async ()=>{
         const res = await request(app).get('/alunos/teste@teste.com')
         expect(res.statusCode).toEqual(200)
         expect(res.error).toBe(false)
-        expect(res.body).toHaveProperty('result')
+        expect(res.body).toHaveProperty('resultado')
     })
 
     it('should put on my route alunos with email param', async ()=>{
@@ -41,14 +41,14 @@ describe('Teste das rotas', ()=>{
         })
         expect(res.statusCode).toEqual(200)
         expect(res.error).toBe(false)
-        expect(res.body).toHaveProperty('result')
+        expect(res.body).toHaveProperty('resultado')
     })
     
     it('should delete on my route alunos with email param', async ()=>{
         const res = await request(app).delete('/alunos/teste@teste.com')
         expect(res.statusCode).toEqual(200)
         expect(res.error).toBe(false)
-        expect(res.body).toHaveProperty('result')
+        expect(res.body).toHaveProperty('resultado')
     })
 })
 

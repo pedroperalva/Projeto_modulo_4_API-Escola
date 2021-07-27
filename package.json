@@ -4,7 +4,8 @@
   "description": "Uma api para um projeto do curso Resilia",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js",
     "test": "jest"
   },
   "author": "Pedro Peralva",
