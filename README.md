@@ -17,9 +17,10 @@ O projeto é uma API feita utilizando JavaScript, Node.JS, Express e SQLite como
 
 ## 📗Utilizando a API:
 
-### 1- Ligue o servidor utilizando o nodemon:
+### 1- Ligue o servidor:
 ```bash
-  npm start
+método tradicional: npm start
+utilizando o nodemon: npm run dev
 ```
 ### 2- Você deverá ter na sua máquina um programa para fazer as requisições, como Insomnia ou Postman, por exemplo, e utilizar as seguintes rotas:
 ```bash
